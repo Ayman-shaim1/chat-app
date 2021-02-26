@@ -1,0 +1,94 @@
+.update-user-data-box {
+  display: flex;
+  padding: 30px;
+}
+.update-user-data-box .user-photo-box {
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  margin-right: 20px;
+  width: 350px;
+  height: 300px;
+  border-radius: 10px;
+}
+.update-user-data-box .user-photo-box .user-photo-container {
+  position: relative;
+}
+.update-user-data-box .user-photo-box .user-photo-container button {
+  position: absolute;
+  width:20px;
+  padding: 1px 7px 0px 5px;
+  right:5%;
+  top:0;
+}
+.update-user-data-box .user-photo-box button {
+  margin-top: 5px;
+}
+.update-user-data-box .user-photo-box button.m-btn-green {
+  margin-top: 30px;
+}
+.update-user-data-box .user-photo-box .user-photo-container img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.update-user-data-box .user-info-box {
+  width: 400px;
+  background-color: #fff;
+  padding: 15px;
+  height: 450px;
+  border-radius: 10px;
+  margin-right: 20px;
+  overflow-y: auto;
+}
+.update-user-data-box .user-info-box input {
+  width: 100%;
+}
+.update-user-data-box .user-info-box button {
+  margin-top: 20px;
+}
+.update-user-data-box .email-password-box {
+  width: 400px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  height: 450px;
+  overflow-y: auto;
+}
+.update-user-data-box .email-password-box input {
+  width: 100%;
+}
+.update-user-data-box .email-password-box button {
+  margin-top: 90px;
+}
+input[disabled] {
+  background-color: #f4f4f4;
+  color: #000;
+  font-weight: bold;
+}
+input.unchange {
+  color: gray;
+}
+input.change {
+  color: #000;
+  font-weight: bold;
+}
+/* ****** BEGIN RESPONSIVE ****** */
+@media only screen and (max-width: 800px) {
+  .update-user-data-box {
+    flex-direction: column;
+  }
+  .update-user-data-box .user-photo-box {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .update-user-data-box .user-info-box {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .update-user-data-box .email-password-box {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+/* ****** END RESPONSIVE ****** */

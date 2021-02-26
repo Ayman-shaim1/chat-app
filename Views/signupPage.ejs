@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="./css/register-page.css" />
+
+<form id="frm-register" >
+  <div class="register-box">
+    <!-- BEGIN USER PHOTO -->
+    <div class="chose-user-photo-box">
+      <div class="user-image-box">
+        <img
+          class="user-image"
+          src="../images//user.png"
+          id="img-ch-user-ph"
+          name="img-ch-user-ph"
+        />
+      </div>
+      <hr />
+      <input
+        type="file"
+        class="chose-photo"
+        id="ch-photo"
+        accept="image/x-png,image/jpeg,image/jpg"
+      />
+    </div>
+    <!-- END USER PHOTO -->
+
+    <!-- BEGIN INFORMATIONS  -->
+    <div class="informations-box">
+      <!-- BEGIN FIRST NAME -->
+      <div class="first-name-content">
+        <label for="txt-first-name">First name :</label>
+        <input type="text" id="txt-first-name" class="m-txt" />
+      </div>
+      <!-- END FIRST NAME -->
+
+      <!-- BEGIN LAST NAME -->
+      <div class="last-name-content">
+        <label for="txt-last-name">Last name :</label>
+        <input type="text" id="txt-last-name" class="m-txt" />
+      </div>
+      <!-- END LAST NAME -->
+
+      <!-- BEGIN PHONE -->
+      <div class="phone-content">
+        <label for="txt-phone">Phone :</label>
+        <input type="text" id="txt-phone" class="m-txt" />
+      </div>
+      <!-- END PHONE -->
+
+      <!-- BEGIN COUNTRY -->
+      <div class="country-content">
+        <label for="txt-country">Country :</label>
+        <input type="text" id="txt-country" class="m-txt" />
+      </div>
+      <!-- END COUNTRY -->
+
+      <!-- BEGIN CITY -->
+      <div class="city-content">
+        <label for="txt-city">City :</label>
+        <input type="text" id="txt-city" class="m-txt" />
+      </div>
+      <!-- END CITY -->
+
+      <!-- BEGIN USERNAME -->
+      <div class="username-content">
+        <label for="txt-email">Email :</label>
+        <input type="text" id="txt-email" class="m-txt" />
+      </div>
+      <!-- END USERNAME -->
+
+      <!-- BEGIN PASSWORD -->
+      <div class="password-content">
+        <label for="txt-password">Password :</label>
+        <input type="password" id="txt-password" class="m-txt" />
+      </div>
+      <!-- END PASSWORD -->
+
+      <!-- BEGIN CONFIRM PASSWORD -->
+      <div class="confirm-password-content">
+        <label for="txt-confirm-password">Confirm password :</label>
+        <input type="password" id="txt-confrim-password" class="m-txt" />
+      </div>
+      <!-- END CONFIRM PASSWORD -->
+
+      <!-- ***** SUBMIT FORM ***** -->
+      <button type="submit" class="m-btn m-btn-green m-btn-block">
+        <i class="fas fa-user-plus"></i> register
+      </button>
+      <!-- ***** SUBMIT FORM ***** -->
+    </div>
+    <!-- END INFORMATIONS  -->
+  </div>
+</form>
+<script src="./js/Exception.js"></script>
+<script src="./js/my-modal.js"></script>
+<script src="./js/my-validation.js"></script>
+<script src="./js/signup.js"></script>

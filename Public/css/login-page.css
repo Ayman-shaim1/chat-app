@@ -1,0 +1,73 @@
+.login-box {
+  width: 500px;
+  height: 550px;
+  background-color: #fff;
+  border-radius: 7px;
+  margin: 2% 30% 0% 30%;
+  padding: 15px;
+  overflow-y: auto;
+}
+.login-box .login-image-box {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+.login-box .login-image-box img {
+  width: 65px;
+  height: 65px;
+}
+.login-box .login-her {
+  text-align: center;
+}
+.login-box .login-inputs {
+  padding: 10px;
+}
+.login-box .login-inputs .user-name-content label {
+  font-weight: bold;
+}
+.login-box .login-inputs .user-name-content input {
+  width: 100%;
+  margin-top: 10px;
+}
+.login-box .login-inputs .password-content {
+  margin-top: 2%;
+  position: relative;
+}
+.login-box .login-inputs .password-content label {
+  font-weight: bold;
+}
+.login-box .login-inputs .password-content input {
+  width: 100%;
+  margin-top: 10px;
+}
+.login-box .login-inputs .password-content i {
+  position: absolute;
+  right: 3%;
+  top: 60%;
+  color: gray;
+  cursor: pointer;
+}
+.login-box .login-inputs .not-found-message-box {
+  min-height: 30px;
+  padding: 10px 0px 0px 0px;
+}
+.login-box .login-inputs .not-found-message-box span {
+  color: var(--red);
+  font-size: 14px;
+}
+.login-box .login-inputs .show-password label {
+  font-size: 15px;
+  color: gray;
+}
+.login-box .login-inputs .show-password input {
+  width: 15px;
+  height: 15px;
+}
+.login-box .login-inputs .btn-login {
+  margin-top: 15px;
+}
+.login-box .login-inputs .btn-register {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+

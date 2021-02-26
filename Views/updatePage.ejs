@@ -1,0 +1,157 @@
+<link rel="stylesheet" href="./css/update-page.css" />
+<div class="update-user-data-box">
+  <!--BEGIN UPDATE USER PHOTO -->
+  <div class="user-photo-box">
+    <div class="user-photo-container">
+      <button class="m-btn m-btn-red m-btn-sm" id="delete-user-photo">
+        <i class="fas fa-times"></i>
+      </button>
+      <img src="./images/user.png" class="avatar" id="user-photo" />
+    </div>
+    <hr />
+    <input
+      type="file"
+      class="chose-photo"
+      id="ch-photo"
+      accept="image/x-png,image/jpeg,image/jpg"
+    />
+    <button class="m-btn m-btn-block m-btn-green" id="change-user-photo">
+      change photo
+    </button>
+  </div>
+  <!-- END UPDATE USER PHOTO -->
+  <!-- BEGIN UPDATE USER INFO -->
+  <form id="frm-update-user-info">
+    <div class="user-info-box">
+      <!--BEGIN FIRST NAME -->
+      <div class="firstName">
+        <label for="txt-first-name">First Name :</label>
+        <input id="txt-first-name" class="m-txt unchange" value="" />
+      </div>
+      <!-- END FIRST NAME -->
+      <!--BEGIN LAST NAME -->
+      <div class="lastName">
+        <label for="txt-last-name">Last Name :</label>
+        <input id="txt-last-name" class="m-txt unchange" />
+      </div>
+      <!--END LAST NAME -->
+      <!--BEGIN PHONE -->
+      <div class="phone">
+        <label for="txt-phone">Phone :</label>
+        <input id="txt-phone" class="m-txt unchange" />
+      </div>
+      <!--END PHONE -->
+      <!--BEGIN COUNTRY -->
+      <div class="country">
+        <label for="txt-country">Country :</label>
+        <input id="txt-country" class="m-txt unchange" />
+      </div>
+      <!--END COUNTRY  -->
+      <!--BEGIN CITY -->
+      <div class="city">
+        <label for="txt-city">City :</label>
+        <input id="txt-city" class="m-txt unchange" />
+      </div>
+      <!--END CITY  -->
+      <button class="m-btn m-btn-blue m-btn-block">update</button>
+    </div>
+  </form>
+  <!-- END UPDATE USER INFO -->
+  <!-- BEGIN UPDATE EMAIL & PASSWORD -->
+  <form id="frm-update-password">
+    <div class="email-password-box">
+      <!--BEGIN EMAIL-->
+      <div class="email">
+        <label for="txt-email">Email :</label>
+        <input type="email" id="txt-email" class="m-txt unchange" disabled />
+      </div>
+      <!--END EMAIL-->
+      <!--BEGIN PASSWORD-->
+      <div class="current-password">
+        <label for="txt-current-password">Current password :</label>
+        <input type="password" class="m-txt" id="txt-current-password" />
+      </div>
+      <!--END PASSWORD-->
+
+      <!--BEGIN PASSWORD-->
+      <div class="new-password">
+        <label for="txt-new-password">New password :</label>
+        <input type="password" class="m-txt" id="txt-new-password" />
+      </div>
+      <!--END PASSWORD-->
+      <!-- BEGIN CONFIRM PASSWORD-->
+      <div class="confirm-new-password">
+        <label for="txt-confirm-password">Confirm new password :</label>
+        <input type="password" class="m-txt" id="txt-confirm-new-password" />
+      </div>
+      <!-- END CONFIRM PASSWORD-->
+      <button class="m-btn m-btn-block m-btn-yellow">update</button>
+    </div>
+  </form>
+  <!-- END UPDATE EMAIL & PASSWORD -->
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/RealTime/index.js"></script>
+<script>
+  const photo = document.getElementById("user-photo");
+  const firstName = document.getElementById("txt-first-name");
+  const lastName = document.getElementById("txt-last-name");
+  const phone = document.getElementById("txt-phone");
+  const city = document.getElementById("txt-city");
+  const country = document.getElementById("txt-country");
+  photo.src = connectedUser.photo;
+  firstName.value = connectedUser.firstName;
+  firstName.addEventListener("keyup", (e) => {
+    if (e.target.value != connectedUser.firstName) {
+      e.target.classList.remove("unchange");
+      e.target.classList.add("change");
+    } else {
+      e.target.classList.remove("change");
+      e.target.classList.add("unchange");
+    }
+  });
+  lastName.value = connectedUser.lastName;
+  lastName.addEventListener("keyup", (e) => {
+    if (e.target.value != connectedUser.lastName) {
+      e.target.classList.remove("unchange");
+      e.target.classList.add("change");
+    } else {
+      e.target.classList.remove("change");
+      e.target.classList.add("unchange");
+    }
+  });
+  phone.value = connectedUser.phone;
+  phone.addEventListener("keyup", (e) => {
+    if (e.target.value != connectedUser.phone) {
+      e.target.classList.remove("unchange");
+      e.target.classList.add("change");
+    } else {
+      e.target.classList.remove("change");
+      e.target.classList.add("unchange");
+    }
+  });
+  city.value = connectedUser.city;
+  city.addEventListener("keyup", (e) => {
+    if (e.target.value != connectedUser.city) {
+      e.target.classList.remove("unchange");
+      e.target.classList.add("change");
+    } else {
+      e.target.classList.remove("change");
+      e.target.classList.add("unchange");
+    }
+  });
+  country.value = connectedUser.country;
+  country.addEventListener("keyup", (e) => {
+    if (e.target.value != connectedUser.country) {
+      e.target.classList.remove("unchange");
+      e.target.classList.add("change");
+    } else {
+      e.target.classList.remove("change");
+      e.target.classList.add("unchange");
+    }
+  });
+  document.getElementById("txt-email").value = connectedUser.email;
+</script>
+<script src="./js/my-modal.js"></script>
+<script src="./js/my-validation.js"></script>
+<script src="./js/update.js"></script>

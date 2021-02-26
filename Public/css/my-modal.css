@@ -1,0 +1,211 @@
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+:root {
+  --blue: #247bd8;
+  --red: #e74c3c;
+  --orange: #e26600;
+  --yellow: #ecb100;
+  --green: #00b82b;
+  --cyan: #17a2b8;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+/* BEGIN Modal */
+#modal-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100000000;
+}
+#modal-overlay.open {
+  display: block;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000000000;
+  background-color: #fff;
+  border-radius: 7px;
+  display: none;
+  animation: open-animation 1s;
+}
+
+.modal.open {
+  display: block;
+}
+.modal .modal-header {
+  padding: 0px 15px 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -20px;
+}
+.modal .modal-header .modal-title {
+  color: var(--gray);
+  font-weight: 600;
+  font-size: 20px;
+}
+.modal .modal-header .modal-title i {
+  /* color: #001; */
+  margin-right: 10px;
+}
+.modal.red .modal-header {
+  border-top: solid 10px var(--red);
+  border-radius: 7px;
+}
+.modal.yellow .modal-header {
+  border-top: solid 10px var(--yellow);
+  border-radius: 7px;
+}
+.modal.green .modal-header {
+  border-top: solid 10px var(--green);
+  border-radius: 7px;
+}
+.modal.blue .modal-header {
+  border-top: solid 10px var(--blue);
+  border-radius: 7px;
+}
+.modal .modal-header .modal-btn-close {
+  background: none;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 22px;
+  color: var(--gray);
+  cursor: pointer;
+}
+.modal .modal-content {
+  padding: 15px;
+}
+.modal .modal-footer {
+  padding: 15px;
+  float: right;
+}
+.modal .modal-footer button {
+  margin-left: 5px;
+}
+/* END Modal */
+
+/* BEGIN Animation Modal */
+@keyframes open-animation {
+  0% {
+    transform: translate(-50%, -170%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes click-animation {
+  0% {
+    left: 50.5%;
+  }
+  20% {
+    left: 49.5%;
+  }
+  40% {
+    left: 50.5%;
+  }
+  60% {
+    left: 49.5%;
+  }
+  80% {
+    left: 50.5%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+/* END Animation Modal */
+
+/* BEGIN BUTTON STYLES */
+.m-btn {
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  padding: 0px 15px 0px 15px;
+  font-size: 14px;
+  height: 40px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  color: #000;
+}
+.m-btn.m-btn-sm {
+  width: 55px;
+  height: 27px;
+}
+.m-btn.m-btn-block {
+  width: 100%;
+}
+.m-btn:focus {
+  outline: 0;
+  box-shadow: 0 0 5px 4px lightgray;
+}
+
+.m-btn.m-btn-blue {
+  border: solid 1px var(--blue);
+  color: #fff;
+  background-color: var(--blue);
+}
+.m-btn.m-btn-red {
+  border: solid 1px var(--red);
+  color: #fff;
+  background-color: var(--red);
+}
+.m-btn.m-btn-yellow {
+  border: solid 1px var(--yellow);
+  color: #fff;
+  background-color: var(--yellow);
+}
+.m-btn.m-btn-green {
+  border: solid 1px var(--green);
+  color: #fff;
+  background-color: var(--green);
+}
+.m-btn.m-btn-blue:focus {
+  outline: 0;
+  box-shadow: 0 0 5px 4px rgba(0, 123, 255, 0.25);
+}
+.m-btn.m-btn-red:focus {
+  outline: 0;
+  box-shadow: 0 0 5px 4px rgba(255, 0, 0, 0.562);
+}
+.m-btn.m-btn-green:focus {
+  outline: 0;
+  box-shadow: 0 0 5px 4px rgba(0, 175, 23, 0.562);
+}
+/* END BUTTON STYLES */
+
+/* BEGIN Text Box STYLES */
+.m-txt {
+  border-radius: 3px;
+  display: block;
+  height: 26px;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  width: 250px;
+  margin: 0px 5px 5px 0px;
+}
+.m-txt:focus {
+  border-radius: 3px;
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 7px 0rem rgba(0, 123, 255, 0.25);
+}
+/* END Text Box STYLES */

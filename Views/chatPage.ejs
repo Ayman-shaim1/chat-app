@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="./css/chat-page.css" />
+<!-- BEGIN PROFILE BOX -->
+<div class="profile-box">
+  <!-- BEGIN PROFILE HEADER -->
+  <div class="profile-header">
+    <h2>Profile</h2>
+    <button><i class="fas fa-times"></i></button>
+  </div>
+  <!-- END PROFILE HEADER -->
+
+  <!-- BEGIN PROFILE CONTAINER -->
+  <div class="profile-container">
+    <!-- BEGIN PROFILE INFO -->
+    <div class="profile-info">
+      <!-- BEGIN USER IMAGE -->
+      <div class="image-box">
+        <img src="../images/user.png" class="avatar" id="user-image" />
+      </div>
+      <!-- END USER IMAGE -->
+      <span class="user-full-name" id="full-name">First Name Last Name</span>
+      <span class="online" id="online">online a minute ago</span>
+      <!-- BEGIN PHONE -->
+      <div class="phone-content">
+        <label for="phone">Phone :</label>
+        <span class="phone" id="phone">(555) 555 55 55</span>
+      </div>
+      <!-- END PHONE -->
+      <!-- BEGIN COUNTRY -->
+      <div class="country-content">
+        <label for="">Country :</label>
+        <span class="country" id="country">Morroco</span>
+      </div>
+      <!-- END COUNTRY -->
+      <!-- BEGIN CITY -->
+      <div class="city-content">
+        <label for="">City :</label>
+        <span class="city" id="city">Rabat</span>
+      </div>
+      <!-- END CITY -->
+    </div>
+    <!-- END PROFILE INFO -->
+    <button class="m-btn m-btn-yellow m-btn-block" id="btn-update">
+      <i class="fas fa-users-cog"></i> Update
+    </button>
+    <form action="/logout" method="POST">
+      <button class="m-btn m-btn-blue m-btn-block" id="btn-logout">
+        <i class="fas fa-sign-out-alt"></i> Sign out
+      </button>
+    </form>
+  </div>
+  <!-- END PROFILE CONTAINER -->
+</div>
+<!-- END PROFILE BOX -->
+<!-- BEGIN HEADER -->
+<header>
+  <div class="logo"><h3>chat app</h3></div>
+
+  <div class="user-image-box">
+    <img
+      src="../images/user.png"
+      class="user-image avatar"
+      id="user-header-image"
+    />
+  </div>
+</header>
+<!-- END HEADER -->
+<!-- BEGIN MAIN -->
+<main>
+  <!--BEGIN MESSAGING -->
+  <div class="messaging">
+    <div class="search-box">
+      <input class="txt-search" placeholder="search ..." id="txt-search-chp"/>
+    </div>
+    <!-- BEGIN CHAT PEAPOLE -->
+    <div class="chat-people-content">
+
+    </div>
+    <!-- BEGIN ADD NEW CONVERTATION  -->
+    <div class="add">
+      <button class="btn-add m-btn m-btn-block m-btn-blue">
+        <i class="fas fa-user-plus"></i> Add
+      </button>
+    </div>
+    <!-- END ADD NEW CONVERTATION  -->
+    <!-- END CHAT PEAPOLE -->
+  </div>
+  <!--END MESSAGING -->
+
+  <!-- BEGIN CONVERTATION -->
+  <div class="convertation">
+    <!--BEGIN ADD CONVERTATION -->
+    <div class="add-convertation">
+      <div class="add-convertation-images-content">
+        <img src="./images/B-A-C.jpg" />
+      </div>
+    </div>
+    <!--END ADD CONVERTATION -->
+  </div>
+  <!-- END CONVERTATION -->
+</main>
+<!-- END MAIN -->
+
+<script src="./js/my-modal.js"></script>
+<script src="./js/cookie.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/RealTime/index.js"></script>
+<script src="./js/ChatPage/index.js"></script>
+<script src="./js/ChatPage/messaging.js"></script>
+<script src="./js/ChatPage/convertation.js"></script>

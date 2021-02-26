@@ -1,0 +1,115 @@
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+}
+/* BEGIN Exception */
+#exception-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(54, 70, 93, 0.95);
+  z-index: 100;
+}
+#exception-overlay.open {
+  display: block;
+}
+.exception {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border-radius: 7px;
+  display: none;
+  animation: exception-open-animation 1s;
+}
+.exception.open {
+  display: block;
+}
+.exception .exception-header {
+  display: flex;
+  justify-content: space-between;
+}
+.exception .exception-header .exception-title {
+  margin: auto;
+  color: #fff;
+}
+.exception .exception-header .exception-title i {
+  color: yellow;
+  margin-right: 20px;
+}
+.exception .exception-header .exception-btn-close {
+  background: none;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+.exception .exception-content {
+  color: #fff;
+  padding: 5px;
+}
+
+.exception .exception-content .exception-text {
+  text-align: justify;
+  font-size: 15px;
+}
+.exception .exception-footer {
+  float: right;
+}
+.exception .exception-footer button {
+  font-size: 16px;
+  border-radius: 2px;
+  background: #303f53;
+  text-shadow: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  min-width: 100px;
+  cursor: pointer;
+  outline: none;
+}
+.exception .exception-footer button:hover {
+  background-color: #bdc3c7;
+  color: #000;
+}
+/* END Exception  */
+/* BEGIN exception animation  */
+@keyframes exception-open-animation {
+  0% {
+    transform: translate(-20%, -100%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes click-animation {
+  0% {
+    left: 50.5%;
+  }
+  20% {
+    left: 49.5%;
+  }
+  40% {
+    left: 50.5%;
+  }
+  60% {
+    left: 49.5%;
+  }
+  80% {
+    left: 50.5%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+/* END exception animation */

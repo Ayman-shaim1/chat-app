@@ -1,0 +1,574 @@
+/* BEGIN PROFILE BOX */
+.profile-box.open {
+  right: 0%;
+}
+.profile-box {
+  position: fixed;
+  right: -350%;
+  top: 0;
+  width: 350px;
+  background-color: #fff;
+  z-index: 1000000;
+  min-height: 100vh;
+  transition: 1s;
+}
+.profile-box .profile-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px lightgray;
+  padding: 5px 30px 5px 30px;
+  margin-bottom: 20px;
+}
+.profile-box .profile-header h2 {
+  color: var(--blue);
+  font-weight: 501;
+}
+.profile-box .profile-header button {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.profile-box .profile-container {
+  padding: 20px;
+}
+.profile-box .profile-container .image-box {
+  text-align: center;
+}
+.profile-box .profile-container .image-box img {
+  width: 70px;
+  height: 70px;
+}
+.profile-box .profile-container .user-full-name {
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.profile-box .profile-container .online {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 30px;
+}
+.profile-box .profile-container .phone-content {
+  margin-top: 60px;
+}
+.profile-box .profile-container .phone-content label {
+  font-weight: bold;
+}
+.profile-box .profile-container .phone-content .phone {
+  display: block;
+  margin-bottom: 20px;
+}
+.profile-box .profile-container .country-content label {
+  font-weight: bold;
+}
+.profile-box .profile-container .country-content .country {
+  display: block;
+  margin-bottom: 20px;
+}
+.profile-box .profile-container .city-content label {
+  font-weight: bold;
+}
+.profile-box .profile-container .city-content .city {
+  display: block;
+  margin-bottom: 50px;
+}
+.profile-box .profile-container button{
+  margin-top: 10px;
+}
+
+/* END PROFILE BOX */
+
+/* BEGIN HEADER */
+header {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 0 5px 4px lightgrey;
+  background-color: var(--blue);
+  color: #fff;
+}
+
+header .logo {
+  width: 50%;
+}
+header .logo h3 {
+  margin-left: 15%;
+}
+header .user-image-box {
+  width: 50px;
+  height: 50px;
+  margin-right: 10%;
+  padding: 5px;
+}
+/* END HEADER */
+/* BEGIN MAIN */
+main {
+  display: flex;
+  margin: 10px;
+}
+main .messaging {
+  width: 500px;
+  border-right: solid 1px lightgray;
+
+  position: relative;
+  background-color: #fff;
+  height: 550px;
+}
+
+main .messaging .search-box {
+  width: 100%;
+  padding: 15px;
+}
+
+main .messaging .search-box .txt-search {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: solid 1px lightgray;
+}
+
+main .messaging .chat-people-content .chat-people {
+  display: flex;
+  padding: 10px;
+  border-top: solid 1px lightgray;
+  margin: 0;
+  cursor: pointer;
+}
+main .messaging .chat-people-content {
+  height: 446px;
+  overflow-y: scroll;
+}
+main .messaging .chat-people-content::-webkit-scrollbar {
+  width: 0px;
+}
+
+main .messaging .chat-people-content .chat-people.active {
+  background-color: #f4f4f4;
+}
+
+main .messaging .chat-people-content .chat-people:last-child {
+  border-bottom: solid 1px lightgray;
+}
+main .messaging .chat-people-content .chat-people .image-box {
+  margin-top: 1%;
+  position: relative;
+}
+main .messaging .chat-people-content .chat-people .image-box .enline {
+  width: 7px;
+  height: 7px;
+  background-color: var(--green);
+  border-radius: 50%;
+  position: absolute;
+  left: 3%;
+  top: 2%;
+  z-index: 100;
+}
+main .messaging .chat-people-content .chat-people .chat-ib {
+  margin-left: 20px;
+  width: 100%;
+}
+main .messaging .chat-people-content .chat-people .chat-ib .user-name {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+main .messaging .chat-people-content .chat-people .chat-ib .last-msg {
+  font-size: 13px;
+  color: gray;
+}
+main .messaging .chat-people-content .chat-people .chat-ib .last-msg.notseen {
+  font-size: 13px;
+  color: #000;
+  font-weight: bold;
+}
+main .messaging .chat-people-content .chat-people .chat-ib .typing {
+  font-size: 13px;
+  color: green;
+  font-weight: bold;
+}
+main .messaging .chat-people-content .chat-people .msg-time {
+  margin: 2% 5% 2% 5%;
+  display: flex;
+}
+main .messaging .chat-people-content .chat-people .time {
+  font-size: 12px;
+  color: gray;
+}
+main .messaging .chat-people-content .chat-people .msg-time .nbr-msg {
+  height: 20px;
+  width: 20px;
+  background-color: var(--blue);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 10px;
+  margin-left: 10%;
+  padding: 2px 2px 2px 4px;
+}
+main .messaging .chat-people-content .chat-people .remove-convertaion-box i {
+  color: gray;
+  display: none;
+  cursor: pointer;
+}
+main
+  .messaging
+  .chat-people-content
+  .chat-people:hover
+  .remove-convertaion-box
+  i {
+  display: block;
+}
+main .messaging .add {
+  bottom: 0;
+  width: 100%;
+}
+main .messaging .add button {
+  z-index: 1000;
+  border-radius: 0px;
+}
+.f-user {
+  display: flex;
+  border-top: solid 1px lightgray;
+  padding: 10px 20px 10px 20px;
+}
+.f-user:last-child {
+  border-bottom: solid 1px lightgray;
+}
+.f-user .f-user-images-content img {
+  width: 40px;
+  height: 40px;
+}
+.f-user .f-user-info {
+  margin-left: 3%;
+}
+.f-user .f-user-info span {
+  display: block;
+}
+.f-user .f-user-info span.f-user-full-name {
+  font-weight: 600;
+}
+.f-user .f-user-info span.f-user-city-country {
+  font-size: 13px;
+  color: var(--gray);
+}
+.f-user button {
+  width: 20px;
+  margin-left: 45%;
+}
+/* END MAIN */
+
+/* BEGIN CONVERTATION */
+main .convertation {
+  width: 900px;
+  background-color: #fff;
+  position: relative;
+  height: 550px;
+}
+/* convertation header */
+main .convertation .conv-header {
+  padding: 5px;
+  width: 100%;
+  background-color: var(--blue);
+  display: flex;
+}
+main .convertation .conv-header .image-box {
+  margin-left: 20px;
+  position: relative;
+}
+main .convertation .conv-header .image-box .enline {
+  width: 7px;
+  height: 7px;
+  background-color: var(--green);
+  border-radius: 50%;
+  position: absolute;
+  left: 3%;
+  top: 10%;
+  z-index: 100;
+}
+main .convertation .conv-header .user-ib {
+  margin-left: 20px;
+  color: #fff;
+}
+main .convertation .conv-header .user-ib .user-name {
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 3px;
+}
+main .convertation .conv-header .user-ib .en-ligne {
+  font-size: 11px;
+  margin-top: 5px;
+}
+main .convertation .conv-header .user-ib .typing {
+  font-size: 11px;
+  margin-top: 5px;
+  color: #fff;
+}
+/* convertation header */
+
+/* convertation body */
+
+main .convertation .conv-body::-webkit-scrollbar {
+  background-color: #f4f4f4;
+  width: 4px;
+  border-radius: 30px;
+}
+main .convertation .conv-body::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 30px;
+}
+main .convertation .conv-body {
+  height: 400px;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+/* main .convertation .add-convertation-images-content{
+  
+} */
+
+main .convertation .add-convertation .add-convertation-images-content {
+  text-align: center;
+}
+main .convertation .add-convertation .add-convertation-images-content img {
+  width: 450px;
+}
+/* ------- begin messages -------  */
+/* begin my message */
+main .convertation .conv-body .my-message {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+main .convertation .conv-body .my-message .message-content {
+  margin-right: 10px;
+  width: 50%;
+}
+main .convertation .conv-body .my-message .message-content .message-text {
+  background-color: var(--blue);
+  color: #f4f4f4;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px 0px 10px 10px;
+  position: relative;
+}
+
+main .convertation .conv-body .my-message .message-content .message-text i {
+  position: absolute;
+  right: 20px;
+  top: 13px;
+  display: none;
+  cursor: pointer;
+}
+main
+  .convertation
+  .conv-body
+  .my-message
+  .message-content
+  .message-text:hover
+  span{
+    display: block;
+    width: 100%;
+  }
+main
+  .convertation
+  .conv-body
+  .my-message
+  .message-content
+  .message-text:hover
+  i {
+  display: block;
+}
+main .convertation .conv-body .my-message .message-content .message-info {
+  font-size: 12px;
+  color: gray;
+  margin-top: -2%;
+}
+main .convertation .conv-body .my-message {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+main .convertation .conv-body .my-message .message-content {
+  margin-right: 10px;
+  width: 50%;
+}
+main .convertation .conv-body .my-message .message-content .message-text {
+  background-color: var(--blue);
+  color: #f4f4f4;
+  padding: 10px;
+  font-size: 14px;
+  line-break: anywhere;
+  border-radius: 10px 0px 10px 10px;
+}
+main .convertation .conv-body .my-message .message-content .message-text span {
+  padding-right: 30px;
+}
+main .convertation .conv-body .my-message .message-content .message-info {
+  font-size: 12px;
+  color: gray;
+  margin-top: -2%;
+}
+/* end my message */
+
+/* begin friend message */
+main .convertation .conv-body .friend-message {
+  width: 100%;
+}
+main .convertation .conv-body .friend-message .message-content {
+  margin-left: 10px;
+  width: 50%;
+}
+main .convertation .conv-body .friend-message .message-content .message-text {
+  background-color: #f4f4f4;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 0px 10px 10px 10px;
+  width: 100%;
+  position: relative;
+  line-break: anywhere;
+}
+main
+  .convertation
+  .conv-body
+  .friend-message
+  .message-content
+  .message-text:hover
+  span {
+  display: block;
+  width: 95%;
+}
+main .convertation .conv-body .friend-message .message-content .message-text i {
+  position: absolute;
+  right: 20px;
+  top: 13px;
+  display: none;
+  color: gray;
+  cursor: pointer;
+}
+main
+  .convertation
+  .conv-body
+  .friend-message
+  .message-content
+  .message-text:hover
+  i {
+  display: block;
+}
+main .convertation .conv-body .friend-message .message-content .message-info {
+  font-size: 12px;
+  color: gray;
+  margin-top: -2%;
+}
+
+/* end friend message */
+/* ------- end messages -------  */
+
+/* convertation body */
+
+/* convertation footer */
+main .convertation .conv-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0px -3px 5px 1px lightgrey;
+}
+main .convertation .conv-footer .send-to-user {
+  display: flex;
+}
+main .convertation .conv-footer .send-to-user input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+main .convertation .conv-footer .send-to-user button {
+  height: 40px;
+}
+/* convertation footer */
+
+/* END CONVERTATION */
+
+/* BEGIN ADD NEW CONVERTAION */
+.add-new-convertaion-box {
+  height: 600px;
+}
+.add-new-convertation-box .search-box {
+  display: flex;
+}
+.add-new-convertation-box .search-box input {
+  width: 270px;
+}
+.add-new-convertation-box .search-result{
+  height: 170px;
+  overflow-y: auto;
+}
+.add-new-convertation-box .search-result h2 {
+  color: gray;
+  text-align: center;
+}
+.add-new-convertation-box .search-result .user {
+  border-top: solid 1px #f4f4f4;
+  padding: 10px;
+}
+.add-new-convertation-box .search-result .user:first-child {
+  margin-top: 10px;
+}
+.add-new-convertation-box .search-result .user {
+  display: flex;
+}
+.add-new-convertation-box .search-result .user .user-image-box {
+  margin-right: 7px;
+}
+.add-new-convertation-box .search-result .user .user-image-box img {
+  margin-top: 5px;
+}
+.add-new-convertation-box .search-result .user .user_ib {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.add-new-convertation-box .search-result .user .user_ib span {
+  display: block;
+}
+.add-new-convertation-box .search-result .user .user_ib .fullName {
+  font-size: 14px;
+  font-weight: bold;
+}
+.add-new-convertation-box .search-result .user .user_ib .city_country {
+  font-size: 13px;
+  color: gray;
+}
+.add-new-convertation-box .search-result .user .btn-add-box {
+  margin-left: 15px;
+}
+.add-new-convertation-box .search-result .user .btn-add-box button {
+  width: 50px;
+}
+
+/* END ADD NEW CONVERTAION */
+
+/* BEGIN RESPONSIVE */
+@media only screen and (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+  main .messaging {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  main .convertation {
+    width: 100%;
+  }
+}
+/* END RESPONSIVE */
