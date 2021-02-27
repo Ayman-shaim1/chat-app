@@ -1,4 +1,4 @@
-const socket = io("https://mysterious-mountain-66216.herokuapp.com");
+const socket = io("https://intense-eyrie-62566.herokuapp.com");
 socket.emit("userConnect", connectedUser.email);
 
 socket.on("client-user-connect", (email) => {
