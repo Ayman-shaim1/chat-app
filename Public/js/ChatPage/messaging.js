@@ -291,7 +291,6 @@ function onClickOpenNewConvertation() {
               </div> `;
               messaging.insertAdjacentHTML("afterbegin", html_chat_people);
               openConvertation(obj.user);
-              deleteConvertation();
               onClickOpenConvertation();
               onClickShowUserProfile();
             }
@@ -302,10 +301,8 @@ function onClickOpenNewConvertation() {
   });
 }
 function deleteConvertation() {
-  document
-    .querySelectorAll(
-      ".messaging .chat-people-content .chat-people .remove-convertaion-box i"
-    )
+  messaging
+    .querySelectorAll(".chat-people .remove-convertaion-box i")
     .forEach((btnRemove) => {
       btnRemove.addEventListener("click", () => {
         const email = btnRemove.parentElement.parentElement.getAttribute("id");
@@ -407,14 +404,17 @@ function onClickShowUserProfile() {
     });
   });
 }
-document.getElementById("txt-search-chp").addEventListener("keyup",(e) => {
+document.getElementById("txt-search-chp").addEventListener("keyup", (e) => {
   messaging.querySelectorAll(".chat-people").forEach((chp) => {
     const fullName = chp.querySelector(".chat-ib .user-name").innerText;
     const email = chp.getAttribute("id");
     const value = e.target.value;
-    if(!fullName.toLowerCase().includes(value) && !email.toLowerCase().includes(value)){
-      chp.style.display  = "none";
-    }else{
+    if (
+      !fullName.toLowerCase().includes(value) &&
+      !email.toLowerCase().includes(value)
+    ) {
+      chp.style.display = "none";
+    } else {
       chp.style.display = "flex";
     }
   });

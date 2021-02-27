@@ -121,6 +121,7 @@ function openConvertation(user, html_messages) {
         sp_USER_TYPING();
         seenMessage(connectedUser.email, user.email);
         convertation_deleteMessage();
+        onClickOpenProfile();
       }
     })
     .catch((err) => alert(err));
@@ -389,4 +390,19 @@ function convertation_userDisconnect(email) {
     );
     userIBOnLine.innerText = "online 1 minute ago";
   }
+}
+function onClickOpenProfile() {
+  const avatar = convertation.querySelector(".conv-header .image-box img");
+  const email = convertation.getAttribute("id");
+  avatar.addEventListener("click", () => {
+    fetch(`/getUser/${email}`)
+      .then((res) => res.json())
+      .then((obj) => {
+        if (!obj.done) {
+          alert(obj.msg);
+        } else {
+          openProfile(obj.user);
+        }
+      });
+  });
 }
