@@ -1,4 +1,4 @@
-const socket = io("http://localhost:5000");
+const socket = io("https://mysterious-mountain-66216.herokuapp.com");
 socket.emit("userConnect", connectedUser.email);
 
 socket.on("client-user-connect", (email) => {
